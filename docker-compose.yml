@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+  
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    depends_on:
+      - api-service
+    container_name: my-php-myadmin-basicproject
+    ports:
+      - "8082:80"
+    restart: always
+  
+  api-service:
+    image: freds00n/finalproject:latest
+    container_name: finalproject
+    ports:
+      - "8051:8051"
+      - "3306:3306"
+    restart: always
+    expose:
+      - "3306"
+    volumes:
+      - sqlite_useritems_volume:/code/sqlitedb
+
+  volumes:
+    sqlite_useritems_volume:
+#    env_file:
+#        - .env
