@@ -20,5 +20,5 @@ services:
     volumes:
       - sqlite_useritems_volume:/code/sqlitedb
 
-  volumes:
-    sqlite_useritems_volume:
+volumes:
+  sqlite_useritems_volume:
