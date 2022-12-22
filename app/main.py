@@ -1,9 +1,10 @@
 from fastapi import Depends, FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
-from . import crud, models, schemas
-from .database import SessionLocal, engine
+import crud
+import models
+import schemas
+from database import SessionLocal, engine
 import os
 
 if not os.path.exists('.\sqlitedb'):
