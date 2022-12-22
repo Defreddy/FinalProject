@@ -2,11 +2,8 @@ from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
-import crud
-import models
-import schemas
-from database import SessionLocal, engine
-import os
+from . import crud, models, schemas
+from .database import SessionLocal, engine
 
 if not os.path.exists('.\sqlitedb'):
     os.makedirs('.\sqlitedb')
