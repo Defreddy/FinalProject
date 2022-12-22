@@ -16,10 +16,7 @@ services:
     container_name: finalproject
     ports:
       - "8051:8051"
-      - "3306:3306"
     restart: always
-    expose:
-      - "3306"
     volumes:
       - sqlite_useritems_volume:/code/sqlitedb
 
