@@ -15,22 +15,22 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-origins = [
-    "https://api-service-defreddy.cloud.okteto.net/*",
-    "https://phpmyadmin-defreddy.cloud.okteto.net/*",
-    "https://api-service-defreddy.cloud.okteto.net/createcve/",
-    "https://defreddy.github.io",
-    "https://frederikcrauwels.sinners.be/",
-    "https://frederikcrauwels.sinners.be"
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=['*'],
-    allow_credentials=True,
-    allow_methods=['*'],
-    allow_headers=['*'],
-)
+#origins = [
+#    "https://api-service-defreddy.cloud.okteto.net/*",
+#    "https://phpmyadmin-defreddy.cloud.okteto.net/*",
+#    "https://api-service-defreddy.cloud.okteto.net/createcve/",
+#    "https://defreddy.github.io",
+#    "https://frederikcrauwels.sinners.be/",
+#    "https://frederikcrauwels.sinners.be"
+#]
+#
+#app.add_middleware(
+#    CORSMiddleware,
+#    allow_origins=['*'],
+#    allow_credentials=True,
+#    allow_methods=['*'],
+#    allow_headers=['*'],
+#)
 
 def get_db():
     db = SessionLocal()
