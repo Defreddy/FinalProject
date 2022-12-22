@@ -2,15 +2,6 @@ version: '3.3'
 
 services:
   
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
-    depends_on:
-      - api-service
-    container_name: my-php-myadmin-basicproject
-    ports:
-      - "8082:80"
-    restart: always
-  
   api-service:
     image: freds00n/finalproject:latest
     container_name: finalproject
