@@ -35,3 +35,10 @@ def create_user_item(db: Session, item: schemas.ItemCreate, user_id: int):
     db.commit()
     db.refresh(db_item)
     return db_item
+
+def get_userPass(db: Session, query: str):
+    products = db.query(models.User).filter(models.User.id.contains(query)).all()
+    listProducts = []
+    for prod in products:
+        listProducts.append(prod)
+    return listProducts

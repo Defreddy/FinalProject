@@ -1,4 +1,5 @@
 from fastapi import Depends, FastAPI, HTTPException
+from fastapi_login import LoginManager
 from sqlalchemy.orm import Session
 
 import crud
@@ -14,6 +15,9 @@ if not os.path.exists('.\sqlitedb'):
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+SECRET = "super-secret-key"
+manager = LoginManager(SECRET, '/login')
 
 #origins = [
 #    "https://api-service-defreddy.cloud.okteto.net/*",
@@ -72,3 +76,8 @@ def create_item_for_user(
 def read_items(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     items = crud.get_items(db, skip=skip, limit=limit)
     return items
+
+@app.get("/userpass/", response_model=list[schemas.User])
+def read_users(query: str, db: Session = Depends(get_db)):
+    products = crud.get_userPass(db, query=query)
+    return products
