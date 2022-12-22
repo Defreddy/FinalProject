@@ -25,5 +25,3 @@ services:
 
   volumes:
     sqlite_useritems_volume:
-#    env_file:
-#        - .env
