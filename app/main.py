@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 
 from . import crud, models, schemas
 from .database import SessionLocal, engine
+import os
 
 if not os.path.exists('.\sqlitedb'):
     os.makedirs('.\sqlitedb')
