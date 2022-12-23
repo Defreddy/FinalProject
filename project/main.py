@@ -1,7 +1,9 @@
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi_login import LoginManager
 from sqlalchemy.orm import Session
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 
+import auth
 import crud
 import models
 import schemas
@@ -17,7 +19,9 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 SECRET = "super-secret-key"
-manager = LoginManager(SECRET, '/login')
+#manager = LoginManager(SECRET, '/login')
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 #origins = [
 #    "https://api-service-defreddy.cloud.okteto.net/*",
@@ -43,6 +47,23 @@ def get_db():
     finally:
         db.close()
 
+@app.post("/token")
+def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+    #Try to authenticate the user
+    user = auth.authenticate_user(db, form_data.username, form_data.password)
+    if not user:
+        raise HTTPException(
+            status_code=401,
+            detail="Incorrect username or password",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    # Add the JWT case sub with the subject(user)
+    access_token = auth.create_access_token(
+        data={"sub": user.email}
+    )
+    #Return the JWT as a bearer token to be placed in the headers
+    return {"access_token": access_token, "token_type": "bearer"}
+
 @app.post("/users/", response_model=schemas.User)
 def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     db_user = crud.get_user_by_email(db, email=user.email)
@@ -52,7 +73,7 @@ def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
 
 
 @app.get("/users/", response_model=list[schemas.User])
-def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     users = crud.get_users(db, skip=skip, limit=limit)
     return users
 
