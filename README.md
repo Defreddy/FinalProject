@@ -76,6 +76,8 @@ Overview of the OpenAPI documentation which will be further highlighted below:
 * ***Okteto Cloud***
 As the deployment has two "services" - one main, one SQLlite / volume, the Okteto Cloud deployment is unable to create a single deployment.
 Therefore a link towards a working production environment in the cloud is not possible.
+
+It is advised to use a local git clone, or utilize the readily available docker image provided at the top of this readme.
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/OktetoCloud.png)
 
 * ***Authentication***
