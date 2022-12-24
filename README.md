@@ -77,11 +77,13 @@ $ localhost:8051/docs
 
 * ***SQLite database***
   - The application is supported by a SQLite database which comes with a volume. This will make sure data is persistent + API calls will interact with the database.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Databasestructure.png)
 
 ## Postman Requests
 
 Overview of the OpenAPI documentation which will be further highlighted below:
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/FastAPIDocs.png)
 
 * ***Okteto Cloud***
