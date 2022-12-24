@@ -70,10 +70,16 @@ $ localhost:8051/docs
 
 ## Postman Requests
 
-Overview of the OpenAPI documentation:
-![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/FastAPI-DOCS.png)
+Overview of the OpenAPI documentation which will be further highlighted below:
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/FastAPIDocs.png)
+
+* ***Okteto Cloud***
+As the deployment has two "services" - one main, one SQLlite / volume, the Okteto Cloud deployment is unable to create a single deployment.
+Therefore a link towards a working production environment in the cloud is not possible.
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/OktetoCloud.png)
 
 * ***Authentication***
+Below you can see how authentication is provided within the application. A couple of "locked" requests have been provided - but every single one should do exactly the same. Once you have the token, you are able to use the API.
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Authentication.gif)
 
 * [GET - cveID](https://api-service-defreddy.cloud.okteto.net/cve/1)
