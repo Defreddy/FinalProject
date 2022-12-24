@@ -72,16 +72,16 @@ $ localhost:8051/docs
 * ***Hashing***
   - Hashing is provided via Bcrypt and Argon2 protocols. As you can see in the image below, the user password is fully hashed.
   - In further examples you can learn more about authentication and how these hashed passwords work for users / authentication.
-![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/hashing.png)
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Hashing.png)
 
 * ***SQLite database***
   - The application is supported by a SQLite database which comes with a volume. This will make sure data is persistent + API calls will interact with the database.
-![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/hashing.png)
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Database structure.png)
 
 ## Postman Requests
 
 Overview of the OpenAPI documentation which will be further highlighted below:
-![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Databasestructure.png)
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/FastAPIDocs.png)
 
 * ***Okteto Cloud***
   - As the deployment has two "services" - one main, one SQLlite / volume, the Okteto Cloud deployment is unable to create a single deployment.
