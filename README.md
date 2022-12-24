@@ -38,6 +38,25 @@
 - [x] Docker container for API deployment, automatically being pushed via Github Actions.
 - [x] Deployment of API container(s) on Okteto Cloud via Docker Compose.
 
+### Additional requirements
+
+#### Security
+- [x] Second version of the original API with Okta Auth0.
+- [x] KrakenD gateway protecting APIs. 
+
+> **Note**
+> While i did try to implement the security features - i believe they will not be marked for the full grades, if marked at all.
+> Okta Auth0 vs OpenID Connect is quite unclear for me, but i did link Auth0 to the application instead of using our own, custom generated tokens.
+> KrakenD gateway can check one end-point by feeding it Auth0 credentials, as well as obtain valid tokens. The JWT validator is returning 401's thus not working as intended.
+
+#### Front-end
+- [x] Front-end application for all GET and POST endpoints.
+  - [x] Front-end hosting on Netlify.
+  - [x] Front-end style additions (Bootstrap theme).
+  - [x] Integrate Veu, React, Angular or Svelte as Javascript Framework: React.JS.
+ 
+
+
 ## Chosen Theme
 
 Hello there, head chef! Hopefully your meals are deliciously seasoned (see meme at the top) because this project is fully seasoned for completion.
