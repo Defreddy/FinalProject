@@ -90,27 +90,32 @@ Overview of the OpenAPI documentation which will be further highlighted below:
   - As the deployment has two "services" - one main, one SQLlite / volume, the Okteto Cloud deployment is unable to create a single deployment.
 Therefore a link towards a working production environment in the cloud is not possible.
   - It is advised to use a local git clone, or utilize the readily available docker image provided at the top of this readme.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/OktetoCloud.png)
 
 * ***Authentication + GET - Users***
   - Below you can see how authentication is provided within the application. A couple of "locked" requests have been provided - but every single one should do exactly the same. Once you have the token, you are able to use the API. This example will show you how authentication can lock you out unless you have valid credentials.
   - Additionally you can notice how /users/ can be viewed as a working GET request. 
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Authentication.gif)
 
 * ***POST - Creating Users***
   - In order to be able to access the application - you require a user. As the user "string" is being made by the default API call - you can create another one. 
   - This request is using a request body.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/createuser.gif)
 
 * ***GET - user / me***
   - User / me is a self-check of the current user which can be utilized for further implementations (only the current user can change his user data, gerechten,...).
   - This API also required authentication - but will not be further dealt with. The current logged-in user is "String", which is also being displayed in the end.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/userme.gif)
 
 * ***POST - Creating user data***
   - Since we now have working users for all authentication(s), it is time to add more details to our user: our name, age, cooking skill level and favorite kitchen.
   - This request is using a request body. This could be an example where User / Me could be further implemented to avoid having to provide a user_id, for example.
   - Since we have created a new user in the previous step (ID - 3), we will be using our newly created user!
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/createuserdata.gif)
 
 * ***GET + DELETE + PUT - user data***
@@ -118,30 +123,38 @@ Therefore a link towards a working production environment in the cloud is not po
   - The other user accounts created some dummy data as well - which we will be removing in order to gain a better visibility for out PUT request.
   - As the "Delete" and "Put" could be implemented fairly similarly (copy-paste code...) for other parts i only provided them once, as an example.
   - GET: here we are able to view data.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getuserdata.gif)
 
   - DELETE: here we can delete data solely based on user_id.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/deleteuserdata.gif)
 
   - PUT: here we can change any record from our user.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/putuserdata.gif)
 
 * ***GET + POST gerechten***
   - Gerechten are "dishes" - since we are a 10-star head chef we will be sharing our dishes with the world!
   - POST: here we can delete data solely based on user_id.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/postgerecht.gif)
 
   - GET: here we are able to view data.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getgerecht.gif)
 
 * ***GET + POST ingredients***
   - A dish is not complete without ingredients... Which is what we will be adding here. Last but not least we will display the changed GET gerechten page, displaying ingredients.
   - POST ingredients: here we can add data.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/postingredient.gif)
 
   - GET ingredients: here we are able to view data.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getingredient.gif)
 
   - GET Gerechten: here we are able to view data (ingredients being added).
+  
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getgerechtfinal.gif)
 
