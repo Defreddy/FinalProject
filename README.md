@@ -106,15 +106,29 @@ Therefore a link towards a working production environment in the cloud is not po
   - As the "Delete" and "Put" could be implemented fairly similarly (copy-paste code...) for other parts i only provided them once, as an example.
   - GET: here we are able to view data.
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getuserdata.gif)
+
   - DELETE: here we can delete data solely based on user_id.
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/deleteuserdata.gif)
+
   - PUT: here we can change any record from our user.
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/putuserdata.gif)
 
-* ***GET ingredients***
-  - Below you can see how authentication is provided within the application. A couple of "locked" requests have been provided - but every single one should do exactly 
-the same. Once you have the token, you are able to use the API.
-![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Authentication.gif)
+* ***GET + POST gerechten***
+  - Gerechten are "dishes" - since we are a 10-star head chef we will be sharing our dishes with the world!
+  - POST: here we can delete data solely based on user_id.
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/postgerecht.gif)
 
+  - GET: here we are able to view data.
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getgerecht.gif)
 
+* ***GET + POST ingredients***
+  - A dish is not complete without ingredients... Which is what we will be adding here. Last but not least we will display the changed GET gerechten page, displaying ingredients.
+  - POST ingredients: here we can add data.
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/postingredient.gif)
+
+  - GET ingredients: here we are able to view data.
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getingredient.gif)
+
+  - GET Gerechten: here we are able to view data (ingredients being added).
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getgerechtfinal.gif)
 
