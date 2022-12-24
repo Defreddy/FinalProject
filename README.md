@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgiphy.com%2Fexplore%2Fsaltbae&psig=AOvVaw2qntey38DRendgeN__DqFD&ust=1671938422807000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCODm-Y-mkfwCFQAAAAAdAAAAABAE"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgiphy.com%2Fexplore%2Fsaltbae&psig=AOvVaw2qntey38DRendgeN__DqFD&ust=1671938422807000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCODm-Y-mkfwCFQAAAAAdAAAAABAE" alt="Snaky"></a>
+  <a href="https://media.giphy.com/media/l4Jz3a8jO92crUlWM/giphy.gif"><img src="https://media.giphy.com/media/l4Jz3a8jO92crUlWM/giphy.gif" alt="Snaky"></a>
   <br>
   IaC deployment with API integrations
   <br>
