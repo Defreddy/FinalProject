@@ -59,6 +59,9 @@ $ docker compose up
 
 # A variety of links can be accessed including the following:
 $ localhost:8051  | This is your API website / Alpine / Slim. 
+
+# Take a look at the API docs:
+$ localhost:8051/docs
 ```
 
 > **Note**
@@ -66,9 +69,7 @@ $ localhost:8051  | This is your API website / Alpine / Slim.
 
 ## Postman Requests
 
-Take a closer look at the DOCS provided: [Okteto API DOCS](https://api-service-defreddy.cloud.okteto.net/docs)
-
-![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/FastAPI-DOCS.png)
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Authentication.gif)
 
 * [GET - cveID](https://api-service-defreddy.cloud.okteto.net/cve/1)
     - This API can call a parameter thanks to a personal ID. Adjust the last path parameter {cveID}.
