@@ -10,14 +10,9 @@
 
 <p align="center">
     API Deployment:
-  <a href="https://hub.docker.com/repository/docker/freds00n/basicproject" target="_blank">
+  <a href="https://hub.docker.com/repository/docker/freds00n/finalproject" target="_blank">
     <img src="https://img.shields.io/docker/automated/freds00n/basicproject?style=for-the-badge"
          alt="API">
-  </a>
-    Database Deployment:
-    <a href="https://hub.docker.com/repository/docker/freds00n/basicproject_db" target="_blank">
-    <img src="https://img.shields.io/docker/automated/freds00n/basicproject_db?style=for-the-badge"
-         alt="DB">
   </a>
 </p>
 
@@ -29,7 +24,7 @@
   <a href="#additional-requests">Additional requests</a>
 </p>
 
-![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/website.png)
+![screenshot](https://github.com/Defreddy/finalproject/blob/main/Pictures_Readme/website.png)
 
 ## Key Features
 
