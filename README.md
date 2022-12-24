@@ -154,7 +154,7 @@ Therefore a link towards a working production environment in the cloud is not po
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getingredient.gif)
 
-  - GET Gerechten: here we are able to view data (ingredients being added).
-  
+  - GET Gerechten: here we are able to view data (ingredients being added). This will create one view / API with multiple tables: Gerechten and Ingredients combined!
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getgerechtfinal.gif)
 
