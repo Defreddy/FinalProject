@@ -30,7 +30,7 @@
 
 ### General requirements
 - [x] Atleast 3 GET, 1 POST, 1 PUT and 1 DELETE endpoints: 6 GET, 5 POST, 1 PUT, 1 DELETE.
-- [x] Atleast 3 entities via SQLite DB: 4 entities (Users, UserData, Ingredients and Gerechten)
+- [x] Atleast 3 entities via SQLite DB: 4 entities (Users, UserData, Ingredients and Gerechten).
 - [x] Atleast hashing and 0Auth implemented.
 - [x] Description of chose theme, API(s), extensions and link to GitHub README.md.
 - [x] Postman requests displaying working functionality of APIs.
@@ -49,10 +49,10 @@ As this is a course assignment, a variety of general requirements need to be met
 
 ```bash
 # Clone this repository or simply open via GitHub Desktop!
-$ git clone https://github.com/Defreddy/Basicproject.git
+$ git clone https://github.com/Defreddy/FinalProject
 
 # Go into the repository
-$ cd Basicproject
+$ cd FinalProject
 
 # Make sure to launch Docker Desktop and simply run
 $ docker compose up
@@ -62,39 +62,7 @@ $ localhost:8051  | This is your API website / Alpine / Slim.
 ```
 
 > **Note**
-> Certain URLs / parameters in this project need to be adjusted accordingly. There is a website available with <localhost> parameters.
-> You must adjust the CORS table (allow_origins=['*'] = easiest way) and the GitHub secrets will not work for basicproject.yml. You could still define your own .env file!
-
-You can view a live version of the provided APIs:
-* [Here you can view the live website on GitHub pages - POST is NOT working here](https://defreddy.github.io/)
-* [Here you can view the live website on sinners webhosting - POST DOES WORK here](https://frederikcrauwels.sinners.be/)
-
-On these webpages you can:
-* [Obtain a CVE by its name (GET - cveName)](https://frederikcrauwels.sinners.be/#page-top)
-![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/searchCVE.png)
-
-* [Create a new CVE with additional details (POST - createcve)](https://frederikcrauwels.sinners.be/#add)
-![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/newCVE.png)
-
-* [Obtain a better view on a variety of CVEs based on product name (GET - ?query=PRODUCT NAME)](https://frederikcrauwels.sinners.be/#product)
-![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/Products.png)
-
-* [View all available CVEs based on the provided data in the DB (GET - allcve)](https://frederikcrauwels.sinners.be/#list)
-![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/allCVE.png)
-
-You can view a live version of the provided API itself (server):
-* [Okteto API deployment DOCS](https://api-service-defreddy.cloud.okteto.net/docs)
-
-![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/FastAPI-DOCS.png)
-
-You can view a live version of the provided PHPMyAdmin (server):
-* [PHPMyAdmin](https://phpmyadmin-defreddy.cloud.okteto.net/)
-
-![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/CVE-Details.png)
-
-> **Note**
-> GitHub pages has disabled the use of POST requests: [POST is not working here!](https://stackoverflow.com/questions/37761926/does-github-pages-allow-http-post-method)
-> The MySQL server is also deployed in Okteto Cloud but cannot be accessed by URL.
+> The webserver has a built-in SQLite database and an attached volume so your data is persistent.
 
 ## Postman Requests
 
@@ -122,18 +90,6 @@ Take a closer look at the DOCS provided: [Okteto API DOCS](https://api-service-d
     - This API can POST a new CVE with additional details. Adjust parameters through a BODY JSON (Beautify) input. The ID will adjust automatically.
 ![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/POST1.png)
 
-
-## Additional requests
-
-As the assignment is primarily focussed around API calls - additional points could be rewarded if additional factors were taken into consideration.
-
-- [x] Front-end styling (CCS - BootStrap Theme) - personally customized according to the specifications of this assignment.
-- [x] API interaction with Database (MySQL). DB IaC automation deployment with init.sql and .csv input file. The entire DB is build based on this assignment, including init.sql automation for a complete automatic experience based on a .CSV input file. Only adjust the CSV -> deploy automatically in every other way (do not adjust the name of the CSV file). This also includes CRUD, DATABASE, MODEL and SCHEMA.py files.
-- [x] PHPMyAdmin in order to be able to fully utilize the DB from your browser / deployment. No need for additional software / installs. 
-- [x] .env file inside API container including GitHub secrets - this part of the integration will make sure certain parameters are hidden from others.
-- [x] Additioan GET requests (required 2, created 4).
-- [x] CORS has been adjusted to be able to acces both GitHub pages and custom-hosted solution.
-- [x] A complete IaC deployment thanks to multiple Dockerfiles, GitHub workflows / actions and docker-compose.yml
 
 
 
