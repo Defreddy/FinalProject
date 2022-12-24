@@ -72,11 +72,12 @@ $ localhost:8051/docs
 * ***Hashing***
   - Hashing is provided via Bcrypt and Argon2 protocols. As you can see in the image below, the user password is fully hashed.
   - In further examples you can learn more about authentication and how these hashed passwords work for users / authentication.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Hashing.png)
 
 * ***SQLite database***
   - The application is supported by a SQLite database which comes with a volume. This will make sure data is persistent + API calls will interact with the database.
-![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Database structure.png)
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Databasestructure.png)
 
 ## Postman Requests
 
