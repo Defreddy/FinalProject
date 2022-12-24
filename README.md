@@ -29,39 +29,21 @@
 ## Key Features
 
 ### General requirements
-- [x] 1 API in GitHub Repostiory: <a href="https://github.com/Defreddy/Basicproject_frederikcrauwels" target="_blank">Take a look at THIS repo (the one you are currently viewing...)</a>.
-- [x] 1 Front-end in GitHub repository: <a href="https://github.com/Defreddy/Defreddy.github.io" target="_blank">Github.io pages setup (is not fully functioning - POST requests do not work with GitHub pages</a>.
-- [x] Description of the chosen theme, API, Front-end and link(s) + README.md customization.
-- [x] Postman requests of API + screenshots README.md.
-- [x] OpenAPI Docs screenhots README.md.
-
-### REST API
-
-- [x] At least 2 GET Endpoints (4 provided).
-- [x] At least 1 POST endpoint (1 provided).
-- [x] Validations.
-- [x] Usage of path parameters, query parameters and body.
-
-### DEPLOYING
-
-- [x] API Docker container automation via GitHub Actions (2x provided for DB and API image).
-- [x] API Docker container deployment via Okteto Cloud and Docker Compose.
-
-### FRONT-END
-
-- [x] Simple front-end, based on AlpineJS -> This has been changed to python:3.11.0-slim.
-- [x] Deployment of front-end.
-
-### ADDITIONAL FACTORS
-
-- [x] Front-end styling (CCS - BootStrap Theme).
-- [x] API interaction with Database (MySQL).
-- [x] Additional inspiration... (PHPMyAdmin, .env file inside API container including GitHub secrets, CORS and additional GET requests, DB automation deployment with init.sql and .csv input file).
-
+- [x] Atleast 3 GET, 1 POST, 1 PUT and 1 DELETE endpoints: 6 GET, 5 POST, 1 PUT, 1 DELETE.
+- [x] Atleast 3 entities via SQLite DB.
+- [x] Atleast hashing and 0Auth implemented.
+- [x] Description of chose theme, API(s), extensions and link to GitHub README.md.
+- [x] Postman requests displaying working functionality of APIs.
+- [x] OpenAPI documentation.
+- [x] Docker container for API deployment, automatically being pushed via Github Actions.
+- [x] Deployment of API container(s) on Okteto Cloud via Dockere Compose.
 
 ## Chosen Theme
 
-The theme has been chosen based upon CVEs and vulnerabilities. A CVE are [Common Vulnerabilities and Exposures](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures). The list has been provided by CISA, documenting [known and actively exploited vulnerabilities](https://www.cisa.gov/known-exploited-vulnerabilities-catalog).
+Hello there, head chef! Hopefully your meals are deliciously seasoned (see meme at the top) because this project is fully seasoned for completion.
+The chosen theme revolves around delicious recipes and ingredients as i love cooking myself! 
+As this is a course assignment, a variety of general requirements need to be met.
+
 
 ## Usage and links
 
@@ -76,10 +58,7 @@ $ cd Basicproject
 $ docker compose up
 
 # A variety of links can be accessed including the following:
-$ localhost:8051  | This is your API website / Alpine / Slim.
-$ localhost:8082  | This is your PHPMyAdmin - which will provide a much easier way of working with the MySQL DB. 
-$ index.html      | You can simply open up the index.html locally to get a localhost view on your API calls!
-                  | You can access this file in the Website folder.
+$ localhost:8051  | This is your API website / Alpine / Slim. 
 ```
 
 > **Note**
