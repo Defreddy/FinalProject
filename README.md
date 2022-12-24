@@ -30,7 +30,7 @@
 
 ### General requirements
 - [x] Atleast 3 GET, 1 POST, 1 PUT and 1 DELETE endpoints: 6 GET, 5 POST, 1 PUT, 1 DELETE.
-- [x] Atleast 3 entities via SQLite DB.
+- [x] Atleast 3 entities via SQLite DB: 4 entities (Users, UserData, Ingredients and Gerechten)
 - [x] Atleast hashing and 0Auth implemented.
 - [x] Description of chose theme, API(s), extensions and link to GitHub README.md.
 - [x] Postman requests displaying working functionality of APIs.
