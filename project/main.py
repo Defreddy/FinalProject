@@ -116,7 +116,7 @@ def read_gerechten(skip: int = 0, limit: int = 100, db: Session = Depends(get_db
     return gerecht
 
 @app.post("/gerechten/", response_model=schemas.Gerecht)
-def create_user(gerecht: schemas.GerechtenCreate, db: Session = Depends(get_db)):
+def create_gerecht(gerecht: schemas.GerechtenCreate, db: Session = Depends(get_db)):
     db_gerechten = crud.get_gerecht_by_name(db, gerecht=gerecht.naamGerecht)
     if db_gerechten:
         raise HTTPException(status_code=400, detail="Gerecht already registered")
@@ -128,7 +128,7 @@ def read_ingredients(skip: int = 0, limit: int = 100, db: Session = Depends(get_
     return ingredient
 
 @app.post("/ingredients/{idGerecht}", response_model=schemas.Ingredient)
-def create_user(idGerecht: int, ingredients: schemas.IngredientsCreate, db: Session = Depends(get_db)):
+def create_ingredients(idGerecht: int, ingredients: schemas.IngredientsCreate, db: Session = Depends(get_db)):
     db_gerechten = crud.get_ingredient_by_name(db, ingredients=ingredients.naamIngredient)
     if db_gerechten:
         raise HTTPException(status_code=400, detail="Ingredient already registered")
