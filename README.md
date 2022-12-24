@@ -36,7 +36,7 @@
 - [x] Postman requests displaying working functionality of APIs.
 - [x] OpenAPI documentation.
 - [x] Docker container for API deployment, automatically being pushed via Github Actions.
-- [x] Deployment of API container(s) on Okteto Cloud via Dockere Compose.
+- [x] Deployment of API container(s) on Okteto Cloud via Docker Compose.
 
 ## Chosen Theme
 
@@ -68,10 +68,20 @@ $ localhost:8051/docs
 > The webserver has a built-in SQLite database and an attached volume so your data is persistent.
 > Because the assignment requested a local SQLite DB + API server in one, there is unfortunately not an Okteto Cloud link available.
 
+
+* ***Hashing***
+  - Hashing is provided via Bcrypt and Argon2 protocols. As you can see in the image below, the user password is fully hashed.
+  - In further examples you can learn more about authentication and how these hashed passwords work for users / authentication.
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/hashing.png)
+
+* ***SQLite database***
+  - The application is supported by a SQLite database which comes with a volume. This will make sure data is persistent + API calls will interact with the database.
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/hashing.png)
+
 ## Postman Requests
 
 Overview of the OpenAPI documentation which will be further highlighted below:
-![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/FastAPIDocs.png)
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Databasestructure.png)
 
 * ***Okteto Cloud***
   - As the deployment has two "services" - one main, one SQLlite / volume, the Okteto Cloud deployment is unable to create a single deployment.
