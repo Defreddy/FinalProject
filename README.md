@@ -66,9 +66,14 @@ $ localhost:8051/docs
 
 > **Note**
 > The webserver has a built-in SQLite database and an attached volume so your data is persistent.
+> Because the assignment requested a local SQLite DB + API server in one, there is unfortunately not an Okteto Cloud link available.
 
 ## Postman Requests
 
+Overview of the OpenAPI documentation:
+![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/FastAPI-DOCS.png)
+
+* [Authentication]
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Authentication.gif)
 
 * [GET - cveID](https://api-service-defreddy.cloud.okteto.net/cve/1)
