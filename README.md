@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/thepiyushmalhotra/thepiyushmalhotra/blob/output/github-contribution-grid-snake.svg"><img src="https://github.com/thepiyushmalhotra/thepiyushmalhotra/blob/output/github-contribution-grid-snake.svg" alt="Snaky"></a>
+  <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nbcnews.com%2Fnews%2Fus-news%2Fmeet-salt-bae-turkish-chef-whose-signature-move-made-him-n716406&psig=AOvVaw3d5h9tTNubqdLTPurxcV3C&ust=1671938349205000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLj28uylkfwCFQAAAAAdAAAAABAE"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nbcnews.com%2Fnews%2Fus-news%2Fmeet-salt-bae-turkish-chef-whose-signature-move-made-him-n716406&psig=AOvVaw3d5h9tTNubqdLTPurxcV3C&ust=1671938349205000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLj28uylkfwCFQAAAAAdAAAAABAE" alt="Snaky"></a>
   <br>
   IaC deployment with API integrations
   <br>
