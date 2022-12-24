@@ -73,7 +73,7 @@ $ localhost:8051/docs
 Overview of the OpenAPI documentation:
 ![screenshot](https://github.com/Defreddy/Basicproject_frederikcrauwels/blob/main/Pictures_Readme/FastAPI-DOCS.png)
 
-* [Authentication]
+* ***Authentication***
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Authentication.gif)
 
 * [GET - cveID](https://api-service-defreddy.cloud.okteto.net/cve/1)
