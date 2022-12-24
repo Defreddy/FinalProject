@@ -12,15 +12,37 @@ class User(Base):
     hashed_password = Column(String)
     is_active = Column(Boolean, default=True)
 
-    items = relationship("Item", back_populates="owner")
+    userInfo = relationship("userData", back_populates="owner")
 
 
-class Item(Base):
-    __tablename__ = "items"
+class userData(Base):
+    __tablename__ = "userData"
 
-    id = Column(Integer, primary_key=True, index=True)
-    title = Column(String, index=True)
-    description = Column(String, index=True)
-    owner_id = Column(Integer, ForeignKey("users.id"))
+    userID = Column(Integer, ForeignKey("users.id"), primary_key=True, index=True)
+    naam = Column(String)
+    leeftijd = Column(Integer)
+    niveauKoken = Column(Integer)
+    favorieteKeuken = Column(Integer)
 
-    owner = relationship("User", back_populates="items")
+    owner = relationship("User", back_populates="userInfo")
+
+class Gerechten(Base):
+    __tablename__ = "gerechten"
+
+    idGerecht = Column(Integer, primary_key=True, index=True)
+    naamGerecht = Column(String)
+    recept = Column(String)
+    keukenType = Column(String)
+
+    ingredientInfo = relationship("Ingredients", back_populates="allIngredients")
+
+class Ingredients(Base):
+    __tablename__ = "ingredients"
+
+    idIngredient = Column(Integer, primary_key=True, index=True)
+    naamIngredient = Column(String)
+    hoeveelheidIngredient = Column(String)
+    idGerecht = Column(Integer, ForeignKey("gerechten.idGerecht"), index=True)
+
+    allIngredients = relationship("Gerechten", back_populates="ingredientInfo")
+

@@ -74,31 +74,62 @@ def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
 
 @app.get("/users/", response_model=list[schemas.User])
 def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+    current_user = auth.get_current_active_user(db, token)
     users = crud.get_users(db, skip=skip, limit=limit)
     return users
 
 
 @app.get("/users/{user_id}", response_model=schemas.User)
-def read_user(user_id: int, db: Session = Depends(get_db)):
+def read_user(user_id: int, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     db_user = crud.get_user(db, user_id=user_id)
     if db_user is None:
         raise HTTPException(status_code=404, detail="User not found")
     return db_user
 
-
-@app.post("/users/{user_id}/items/", response_model=schemas.Item)
+@app.post("/users/{user_id}/userdata/", response_model=schemas.UserData)
 def create_item_for_user(
-    user_id: int, item: schemas.ItemCreate, db: Session = Depends(get_db)
+    user_id: int, userData: schemas.userDataCreate, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)
 ):
-    return crud.create_user_item(db=db, item=item, user_id=user_id)
+    return crud.create_user_data(db=db, userData=userData, user_id=user_id)
 
+@app.put("/users/{user_id}/userdata/", response_model=schemas.userDataUpdate)
+def update_item_for_user(user_id: int, userData: schemas.userDataUpdate, db: Session = Depends(get_db)):
+    return crud.update_user_data(db=db, userData=userData, user_id=user_id)
 
-@app.get("/items/", response_model=list[schemas.Item])
+@app.delete("/users/{user_id}/userdata/", response_model=schemas.userDataRemove)
+def remove_item_for_user(user_id: int, db: Session = Depends(get_db)):
+    return crud.remove_user_data(db=db, user_id=user_id)
+
+@app.get("/userdata/", response_model=list[schemas.UserData])
 def read_items(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    items = crud.get_items(db, skip=skip, limit=limit)
-    return items
+    userData = crud.get_userData(db, skip=skip, limit=limit)
+    return userData
 
-@app.get("/userpass/", response_model=list[schemas.User])
-def read_users(query: str, db: Session = Depends(get_db)):
-    products = crud.get_userPass(db, query=query)
-    return products
+@app.get("/userme/me", response_model=schemas.User)
+def read_users_me(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+    current_user = auth.get_current_active_user(db,token)
+    return current_user
+
+@app.get("/gerechten/", response_model=list[schemas.Gerecht])
+def read_gerechten(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    gerecht = crud.get_gerechten(db, skip=skip, limit=limit)
+    return gerecht
+
+@app.post("/gerechten/", response_model=schemas.Gerecht)
+def create_user(gerecht: schemas.GerechtenCreate, db: Session = Depends(get_db)):
+    db_gerechten = crud.get_gerecht_by_name(db, gerecht=gerecht.naamGerecht)
+    if db_gerechten:
+        raise HTTPException(status_code=400, detail="Gerecht already registered")
+    return crud.create_gerecht(db=db, gerecht=gerecht)
+
+@app.get("/ingredients/", response_model=list[schemas.Ingredient])
+def read_ingredients(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    ingredient = crud.get_ingredients(db, skip=skip, limit=limit)
+    return ingredient
+
+@app.post("/ingredients/{idGerecht}", response_model=schemas.Ingredient)
+def create_user(idGerecht: int, ingredients: schemas.IngredientsCreate, db: Session = Depends(get_db)):
+    db_gerechten = crud.get_ingredient_by_name(db, ingredients=ingredients.naamIngredient)
+    if db_gerechten:
+        raise HTTPException(status_code=400, detail="Ingredient already registered")
+    return crud.create_ingredient(db=db, ingredients=ingredients, idGerecht=idGerecht)
