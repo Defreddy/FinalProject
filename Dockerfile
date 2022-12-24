@@ -1,5 +1,5 @@
 FROM python:3.10.0-slim
-RUN python -m pip install -q --upgrade pip setuptools wheel
+RUN python -m pip install -q --upgrade pip setuptools wheel python-multipart
 WORKDIR /code
 EXPOSE 8000
 COPY ./requirements.txt /code/requirements.txt
