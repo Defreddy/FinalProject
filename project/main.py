@@ -1,8 +1,11 @@
-from fastapi import Depends, FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException, status, Request
 from fastapi_login import LoginManager
 from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi_login.exceptions import InvalidCredentialsException #Exception class
+from fastapi.responses import RedirectResponse,HTMLResponse
+from os import path
 
 import auth
 import crud
@@ -19,8 +22,9 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-SECRET = "super-secret-key"
-#manager = LoginManager(SECRET, '/login')
+SECRET = "5cb761c7d4f7bda95677a460ad3a9266800fb594516ac51428dddb6ea9310ea3"
+manager = LoginManager(SECRET,token_url='/auth/login',use_cookie=True)
+manager.cookie_name = "some-name"
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
@@ -47,6 +51,40 @@ def get_db():
         yield db
     finally:
         db.close()
+
+fake_db = {'string': {'password': 'string'}}
+
+#@manager.user_loader()
+#def load_user(email: str):  # could also be an asynchronous function
+#    user = fake_db.get(email)
+#    return user
+#
+#@app.post("/auth/login")
+#def login(data: OAuth2PasswordRequestForm = Depends()):
+#    username = data.username
+#    password = data.password
+#    user = load_user(username)
+#    if not user:
+#        raise InvalidCredentialsException
+#    elif password != user['password']:
+#        raise InvalidCredentialsException
+#    access_token = manager.create_access_token(
+#        data={"sub":username}
+#    )
+#    resp = RedirectResponse(url="/users/",status_code=status.HTTP_302_FOUND)
+#    manager.set_cookie(resp,access_token)
+#    return resp
+#
+#@app.get("/private")
+#def getPrivateendpoint(_=Depends(manager)):
+#    return "You are an authentciated user"
+#
+#pth = path.dirname(__file__)
+#
+#@app.get("/",response_class=HTMLResponse)
+#def loginwithCreds(request:Request):
+#    with open(path.join(pth, "..\Website\login.html")) as f:
+#        return HTMLResponse(content=f.read())
 
 @app.post("/token")
 def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):

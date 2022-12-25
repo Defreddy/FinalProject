@@ -7,8 +7,8 @@ services:
     ports:
       - "8051:8051"
     restart: always
-    volumes:
-      - sqlite_useritems_volume:/code/sqlitedb
-
-volumes:
-  sqlite_useritems_volume:
+#    volumes:
+#      - sqlite_useritems_volume:/code/sqlitedb
+#
+#volumes:
+#  sqlite_useritems_volume:

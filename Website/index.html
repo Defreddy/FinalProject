@@ -584,18 +584,6 @@
 
     <!-- ======= Chefs Section ======= -->
 
-    
-
-    <div
-    x-cloak
-    x-data="{chef: [], 'isLoading': true}"
-    x-init="fetch('http://localhost:8000/users/1')
-    .then(response => response.json())
-    .then(response => { chef = response; isLoading = false; console.log(response); })"
-    >
-
-    <h4 x-text="chef[0].email"></h4>
-
     <div
     x-cloak
     x-data="{chefList: [], 'isLoading': true}"
