@@ -127,8 +127,7 @@ def read_user(user_id: int, db: Session = Depends(get_db), token: str = Depends(
 
 @app.post("/users/{user_id}/userdata/", response_model=schemas.UserData)
 def create_item_for_user(
-    user_id: int, userData: schemas.userDataCreate, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)
-):
+    user_id: int, userData: schemas.userDataCreate, db: Session = Depends(get_db)):
     return crud.create_user_data(db=db, userData=userData, user_id=user_id)
 
 @app.put("/users/{user_id}/userdata/", response_model=schemas.userDataUpdate)
