@@ -18,10 +18,11 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
+  <a href="#additional-requirements">Additional requirements</a> •
   <a href="#chosen-theme">Chosen Theme</a> •
   <a href="#usage-and-links">Usage and links</a> •
   <a href="#postman-requests">Postman Requests</a> •
-  <a href="#additional-requests">Additional requests</a>
+  
 </p>
 
 ![screenshot](https://github.com/Defreddy/finalproject/blob/main/Pictures_Readme/website.png)
@@ -55,8 +56,6 @@
   - [x] Front-end style additions (Bootstrap theme).
   - [x] Integrate Veu, React, Angular or Svelte as Javascript Framework: React.JS.
  
-
-
 ## Chosen Theme
 
 Hello there, head chef! Hopefully your meals are deliciously seasoned (see meme at the top) because this project is fully seasoned for completion.
@@ -87,6 +86,7 @@ $ localhost:8051/docs
 > The webserver has a built-in SQLite database and an attached volume so your data is persistent.
 > Because the assignment requested a local SQLite DB + API server in one, there is unfortunately not an Okteto Cloud link available.
 
+## Postman requests
 
 * ***Hashing***
   - Hashing is provided via Bcrypt and Argon2 protocols. As you can see in the image below, the user password is fully hashed.

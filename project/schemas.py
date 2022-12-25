@@ -5,7 +5,7 @@ from typing import Optional
 class userDataBase(BaseModel):
     naam: str
     leeftijd: int
-    niveauKoken: int 
+    niveauKoken: str 
     favorieteKeuken: str 
 
 
@@ -15,7 +15,7 @@ class userDataCreate(userDataBase):
 class userDataRemove(userDataBase):
     naam: str | None = None
     leeftijd: int | None = None
-    niveauKoken: int | None = None
+    niveauKoken: str | None = None
     favorieteKeuken: str | None = None
 
 
@@ -28,7 +28,7 @@ class UserData(userDataBase):
 class userDataUpdate(userDataBase):
     naam: str | None = None
     leeftijd: int | None = None
-    niveauKoken: int | None = None
+    niveauKoken: str | None = None
     favorieteKeuken: str | None = None
 
 class UserBase(BaseModel):

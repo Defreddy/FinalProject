@@ -21,7 +21,7 @@ class userData(Base):
     userID = Column(Integer, ForeignKey("users.id"), primary_key=True, index=True)
     naam = Column(String)
     leeftijd = Column(Integer)
-    niveauKoken = Column(Integer)
+    niveauKoken = Column(String)
     favorieteKeuken = Column(Integer)
 
     owner = relationship("User", back_populates="userInfo")

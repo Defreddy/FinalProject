@@ -2,6 +2,7 @@ from fastapi import Depends, FastAPI, HTTPException
 from fastapi_login import LoginManager
 from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from fastapi.middleware.cors import CORSMiddleware
 
 import auth
 import crud
@@ -23,22 +24,22 @@ SECRET = "super-secret-key"
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-#origins = [
-#    "https://api-service-defreddy.cloud.okteto.net/*",
-#    "https://phpmyadmin-defreddy.cloud.okteto.net/*",
-#    "https://api-service-defreddy.cloud.okteto.net/createcve/",
-#    "https://defreddy.github.io",
-#    "https://frederikcrauwels.sinners.be/",
-#    "https://frederikcrauwels.sinners.be"
-#]
-#
-#app.add_middleware(
-#    CORSMiddleware,
-#    allow_origins=['*'],
-#    allow_credentials=True,
-#    allow_methods=['*'],
-#    allow_headers=['*'],
-#)
+origins = [
+    "https://api-service-defreddy.cloud.okteto.net/*",
+    "https://phpmyadmin-defreddy.cloud.okteto.net/*",
+    "https://api-service-defreddy.cloud.okteto.net/createcve/",
+    "https://defreddy.github.io",
+    "https://frederikcrauwels.sinners.be/",
+    "https://frederikcrauwels.sinners.be"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*'],
+)
 
 def get_db():
     db = SessionLocal()
