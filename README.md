@@ -211,17 +211,24 @@ Details about Okteto Cloud have been fully discussed in a previous chapter.
 
 Netlify is a hosting solution with automated GitHub deployment integrations. This allows you to host a GitHub .html website and automatically deploy new .html changes to your Netlify endpoint. This way, after each deployment, the code is automatically adjusted in your endpoint. Very handy!
 
+The website URL: https://friendly-jelly-004ab4.netlify.app/index.html
+
 Overview of such deployments:
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Netlify.png)
 
 Here you can clearly see it distinguishes .HTML and any other changes. Each change that is NOT .html related, or linked to the /Website directory will be ignored and instantly "Canceled". If the change is happening within the /Website directory, the change will be put through to Netlify resulting in a Non-Canceled, or Published state.
 
-The reason for this type of deployment is the settings. Simply point to the correct directory and you are ready to go, ignoring all other deployments that don't matter to your .HTML (or JS Framework) front-end:
+The reason for this type of deployment is the settings. Simply point to the correct directory and you are ready to go, ignoring all other deployments that don't matter to your .HTML (or JS Framework) front-end. Also active "Active Builds" for continuous deployments:
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Netlify-details.png)
 
 ### API requests included in the front-end
+
+As explained before - not all endpoints have been included for the simple reason of authentication not working as intended. 
+Nonetheless, from a database perspective, 3 out of 4 entities are being displayed and included in this front-end.
+
+You will be able to find more details about the front-end and back-end endpoint deployments in the following titles.
 
 #### GET + POST gerechten
 
