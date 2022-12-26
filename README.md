@@ -253,7 +253,6 @@ This nifty piege of code will make sure a variety of aspects are instantly chang
   - Array within Array: this piece of code will also retrieve data from within the array "IngredientInfo". Double the x-for fun! This is the single reason why i don't need to do a GET Ingredients!
 
 Not to mention, this small piece of HTML coding does a LOT of things.
-
 ```html
 <div
 x-cloak
@@ -309,6 +308,35 @@ class Gerecht(Gerechten):
 
 #### GET - user data
 
+As adding (your own) user data is deemed as a privileged right - and without authorization / authentication - i simply cannot allow this.
+Displaying the data on the other hand is not an issue at all.
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/GETuserdata.png)
+
+Beneath you can see the code - and why the PREVIOUS GET request (Gerechten) is far more superior.
+For each chef you need to copy-paste this exact, same code. While the gerechten code does all of this in one, single go... AND creates each element separately.
+```html
+<div class="row gy-4">
+  <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+    <div class="chef-member">
+      <div class="member-img">
+        <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+        <div class="social">
+          <a href=""><i class="bi bi-twitter"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="member-info">
+        <h4 x-text="chefList[0].naam"></h4>
+        <span x-text="chefList[0].niveauKoken"></span>
+        <p>Age: <span x-text="chefList[0].leeftijd"></span>
+            Favorite kitchen: <span x-text="chefList[0].favorieteKeuken"></span></p>
+      </div>
+    </div>
+  </div><!-- End Chefs Member -->
+```
+
 
 #### POST ingredients
