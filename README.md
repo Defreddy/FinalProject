@@ -22,6 +22,9 @@
   <a href="#chosen-theme">Chosen Theme</a> •
   <a href="#usage-and-links">Usage and links</a> •
   <a href="#postman-requests">Postman Requests</a> •
+  <a href="#hashing-/-SQLite-details">Hashing / SQLite details</a> •
+  <a href="#postman-requests">Postman Requests</a> •
+  
   
 </p>
 
@@ -100,7 +103,7 @@ $ localhost:8051/docs
 > The webserver has a built-in SQLite database and an attached volume so your data is persistent.
 > Because the assignment requested a local SQLite DB + API server in one, there is unfortunately not an Okteto Cloud link available.
 
-## Postman requests
+## Hashing / SQLite details
 
 * ***Hashing***
   - Hashing is provided via Bcrypt and Argon2 protocols. As you can see in the image below, the user password is fully hashed.
