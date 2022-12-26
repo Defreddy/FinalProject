@@ -315,6 +315,7 @@ Displaying the data on the other hand is not an issue at all.
 
 Beneath you can see the code - and why the PREVIOUS GET request (Gerechten) is far more superior.
 For each chef you need to copy-paste this exact, same code. While the gerechten code does all of this in one, single go... AND creates each element separately.
+The code below has to be created for each chef / element, making your HTML file clumsy while you could do exactly the same as with gerecht (x-for wizardy).
 ```html
 <div class="row gy-4">
   <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
@@ -338,5 +339,7 @@ For each chef you need to copy-paste this exact, same code. While the gerechten 
   </div><!-- End Chefs Member -->
 ```
 
+> **Note**
+> This was obviously being done on purpose to display how much more thought and detail went into one process, while the GET user data process is only a simple implementation. The GET gerechten / ingredients is clearly far more advanced and throught through.
 
 #### POST ingredients
