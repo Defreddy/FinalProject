@@ -241,6 +241,35 @@ Once you have submitted a new dish, you can find the dish in the Menu section (o
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/DishDetails.png)
 
+A "complicated" set of HTML coding and AlpineJS allows us to pull multiple data elements from one, big query.
+This query includes your dish details AND your ingredientInfo - your ingredients. Those ingredients can also be added via the front-end.
+
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/bigQuery.png)
+
+```html
+<div
+x-cloak
+x-data="{dishes: [], 'isLoading': true}"
+x-init="fetch('https://api-service-deployment-defreddy.cloud.okteto.net/gerechten/')
+.then(response => response.json())
+.then(response => { dishes = response; isLoading = false; console.log(response); })"
+>
+<h1 x-show="isLoading">Loading...</h1>      
+    <template x-for="dish in dishes" :key="dish.idGerecht">
+        <div class="col-lg-4-center menu-item">
+            <img :src="'assets/img/menu/menu-item-' + dish.idGerecht + '.png'" class="menu-img img-fluid" alt="">
+            <h4 x-text="'Dish name: ' + dish.naamGerecht + ', Dish ID: ' + dish.idGerecht">></h4>
+            <p class="ingredients" >Ingredients: </p>
+            <template x-for="ingredient in dish.ingredientInfo">
+                <p x-text="ingredient.hoeveelheidIngredient + ', ' +  ingredient.naamIngredient"></p>
+            </template>
+            <p class="ingredients" >Recipe: <span x-text="dish.recept"></span></p>
+            <p class="price" x-text="'Dish culture: ' + dish.keukenType">
+            </p>
+          </div><!-- Menu Item -->
+    </template>
+</div>
+```
 
 #### GET - user data
 
