@@ -251,7 +251,7 @@
     <div
     x-cloak
     x-data="{chefList: [], 'isLoading': true}"
-    x-init="fetch('http://localhost:8000/userdata/')
+    x-init="fetch('https://api-service-deployment-defreddy.cloud.okteto.net/userdata/')
     .then(response => response.json())
     .then(response => { chefList = response; isLoading = false; console.log(response); })"
     >
