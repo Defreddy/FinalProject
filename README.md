@@ -56,6 +56,15 @@
   - [x] Front-end style additions (Bootstrap theme).
   - [x] Integrate Veu, React, Angular or Svelte as Javascript Framework: React.JS.
  
+> **Note**
+> Front-end application for all GET and POST endpoints is not marked as "completed", because not ALL GET and POST endpoints have been added.
+> The reason is simple: authentication without a proper Javascript Framework is near-impossible. 
+> I tried implementing fastapi-login to achieve the same for a simple HTML deployment, but is not possible for the current deployment and intended result.
+
+Added endpoints:
+  - GET + POST gerechten.
+  - GET + POST ingredients. Since the ingredients are included (via a relationship) in the "gerechten" request, this is not separatly added, except for the POST.
+
 ## Chosen Theme
 
 Hello there, head chef! Hopefully your meals are deliciously seasoned (see meme at the top) because this project is fully seasoned for completion.
@@ -96,6 +105,8 @@ $ localhost:8051/docs
 
 * ***SQLite database***
   - The application is supported by a SQLite database which comes with a volume. This will make sure data is persistent + API calls will interact with the database.
+  - This is the reason i REMOVED the volume, and only utilized the api-service container itself, without a persistent volume specifically.
+  - This means: once the application is restarted (Okteto = reboot), all previous data is removed, except for the one already included in the original deployment (bare minimum).
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Databasestructure.png)
 
