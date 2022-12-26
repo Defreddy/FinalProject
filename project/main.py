@@ -67,12 +67,12 @@ def login(data: OAuth2PasswordRequestForm = Depends()):
     access_token = manager.create_access_token(
         data={"sub":username}
     )
-    resp = RedirectResponse(url="/users/",status_code=status.HTTP_302_FOUND)
+    resp = RedirectResponse(url="/private",status_code=status.HTTP_302_FOUND)
     manager.set_cookie(resp,access_token)
     return resp
 
 @app.get("/private")
-def getPrivateendpoint(_=Depends(manager)):
+def getPrivateendpoint(user=Depends(manager)):
     return "You are an authentciated user"
 
 pth = path.dirname(__file__)
