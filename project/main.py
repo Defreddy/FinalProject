@@ -169,5 +169,5 @@ def read_ingredients(skip: int = 0, limit: int = 100, db: Session = Depends(get_
 def create_ingredients(idGerecht: int, ingredients: schemas.IngredientsCreate, db: Session = Depends(get_db)):
     db_gerechten = crud.get_ingredient_by_name(db, idGerecht=idGerecht, ingredients=ingredients.naamIngredient)
     if db_gerechten:
-        raise HTTPException(status_code=400, detail="Ingredient already registered")
+        raise HTTPException(status_code=400, detail="Ingredient already registered. Please take a look at the menu for the added ingredient name specifically.")
     return crud.create_ingredient(db=db, idGerecht=idGerecht, ingredients=ingredients)
