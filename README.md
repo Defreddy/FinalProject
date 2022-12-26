@@ -215,7 +215,7 @@ Overview of such deployments:
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Netlify.png)
 
-Here you can clearly see it distinguishes .HTML and any other changes. Each change that is NOT .html related, or linked to the /Website directory will be ignored and instantly "Canceled".
+Here you can clearly see it distinguishes .HTML and any other changes. Each change that is NOT .html related, or linked to the /Website directory will be ignored and instantly "Canceled". If the change is happening within the /Website directory, the change will be put through to Netlify resulting in a Non-Canceled, or Published state.
 
 ### API requests included in the front-end
 
