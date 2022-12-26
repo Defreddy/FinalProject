@@ -23,7 +23,7 @@
   <a href="#usage-and-links">Usage and links</a> •
   <a href="#postman-requests">Postman Requests</a> •
   <a href="#hashing-/-SQLite-details">Hashing / SQLite details</a> •
-  <a href="#postman-requests">Postman Requests</a> •
+  <a href="#front-end">Front-end</a> •
   
   
 </p>
@@ -196,3 +196,4 @@ Therefore a link towards a working production environment in the cloud is not po
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getgerechtfinal.gif)
 
+## Front-end
