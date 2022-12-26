@@ -51,7 +51,7 @@
 > KrakenD gateway can check one end-point by feeding it Auth0 credentials, as well as obtain valid tokens. The JWT validator is returning 401's thus not working as intended.
 
 #### Front-end
-- [x] Front-end application for all GET and POST endpoints.
+- [/] Front-end application for all GET and POST endpoints.
   - [x] Front-end hosting on Netlify.
   - [x] Front-end style additions (Bootstrap theme).
   - [x] Integrate Veu, React, Angular or Svelte as Javascript Framework: React.JS.
