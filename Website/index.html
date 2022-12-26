@@ -228,7 +228,7 @@
                         <template x-for="dish in dishes" :key="dish.idGerecht">
                             <div class="col-lg-4-center menu-item">
                                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                                <h4 x-text="dish.naamGerecht">></h4>
+                                <h4 x-text="dish.naamGerecht + ', ID gerecht: ' + dish.idGerecht">></h4>
                                 <p class="ingredients" >Ingredients: </p>
                                 <template x-for="ingredient in dish.ingredientInfo">
                                     <p x-text="ingredient.hoeveelheidIngredient + ', ' +  ingredient.naamIngredient"></p>
