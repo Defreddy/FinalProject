@@ -153,11 +153,6 @@
                   Please enter a recipe description.
               </div>
             </div>
-            <div class="mb-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
-            </div>
               <!-- error message-->
               <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
               <!-- Submit Button-->
@@ -391,8 +386,10 @@
                 <!-- Submit Button-->
                 <div class="d-grid"><button class="btn btn-primary btn-xl" x-on:click="callmethod2" id="submitButton" type="submit">Submit</button>
                 </div>
+                <div class="col-lg-4 col-md-6">
                 <p>Data inserted with id: <strong x-text="responsedata.idGerecht"></strong></p>
-                <p>Title that was inserted: <strong x-text="responsedata.naamIngredient"></strong></p>
+                <p>Ingredient that was inserted: <strong x-text="responsedata.naamIngredient"></strong></p>
+                </div>
             </form>
             </div><!-- End Reservation Form -->
             </div>
