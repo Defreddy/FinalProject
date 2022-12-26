@@ -250,7 +250,7 @@ This nifty piege of code will make sure a variety of aspects are instantly chang
   - FIRST DIV: this will retrieve all the information listed above in the query: naamGerecht, recept, keukenType, idGerecht and ingredientInfo with naamIngredient and hoeveelheidIngredient.
   - x-for EACH DISH: you will get a completely new, visual element. One single <DIV> element for dish. AlpineJS and HTML wizardry in one!
   - IMG: Since a variety of custom images have been provided (6 to be precise), the code will automatically change the picture according to the idGerecht, ID number.
-  - Array within Array: this piece of code will also retrieve data from within the array "IngredientInfo". Double the x-for fun!
+  - Array within Array: this piece of code will also retrieve data from within the array "IngredientInfo". Double the x-for fun! This is the single reason why i don't need to do a GET Ingredients!
 
 Not to mention, this small piece of HTML coding does a LOT of things.
 
@@ -277,6 +277,34 @@ x-init="fetch('https://api-service-deployment-defreddy.cloud.okteto.net/gerechte
           </div><!-- Menu Item -->
     </template>
 </div>
+```
+
+Accompanied by relationships - you can obtain an array within an array:
+```python
+models.py:
+
+class Gerechten(Base):
+    __tablename__ = "gerechten"
+
+    <elements>
+
+    ingredientInfo = relationship("Ingredients", back_populates="allIngredients")
+
+class Ingredients(Base):
+    __tablename__ = "ingredients"
+
+    <elements>
+
+    allIngredients = relationship("Gerechten", back_populates="ingredientInfo")
+
+schemas.py:
+
+class Gerecht(Gerechten):
+    idGerecht: int
+    ingredientInfo: list[Ingredient] = []
+    
+    class Config:
+        orm_mode = True
 ```
 
 #### GET - user data
