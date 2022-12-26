@@ -89,4 +89,4 @@ def create_ingredient(db: Session, ingredients: schemas.IngredientsCreate, idGer
     return db_ingredient
 
 def get_ingredient_by_name(db: Session, ingredients: str, idGerecht: int):
-    return db.query(models.Ingredients).filter(models.Ingredients.naamIngredient == ingredients, models.Ingredients.idGerecht == idGerecht).first()
+    return db.query(models.Ingredients).filter(models.Ingredients.idGerecht == idGerecht, models.Ingredients.naamIngredient == ingredients).first()
