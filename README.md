@@ -197,6 +197,9 @@ Therefore a link towards a working production environment in the cloud is not po
 
 ## Front-end details
 
+The front-end part of this API integration is fully integrated with an Okteto Cloud deployment, and a Netlify hosting solution.
+test test test
+
 * ***GET + POST gerechten***
 
 * ***GET - user data***
