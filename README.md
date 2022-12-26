@@ -217,7 +217,7 @@ Overview of such deployments:
 
 Here you can clearly see it distinguishes .HTML and any other changes. Each change that is NOT .html related, or linked to the /Website directory will be ignored and instantly "Canceled". If the change is happening within the /Website directory, the change will be put through to Netlify resulting in a Non-Canceled, or Published state.
 
-The reason for this type of deployment are the settings. Simply point to the correct directory and you are ready to go:
+The reason for this type of deployment is the settings. Simply point to the correct directory and you are ready to go, ignoring all other deployments that don't matter to your .HTML (or JS Framework) front-end:
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Netlify-details.png)
 
