@@ -59,7 +59,7 @@
 > **Note**
 > Front-end application for all GET and POST endpoints is not marked as "completed", because not ALL GET and POST endpoints have been added.
 > The reason is simple: authentication without a proper Javascript Framework is near-impossible. 
-> I tried implementing fastapi-login to achieve the same for a simple HTML deployment, but is not possible for the current deployment and intended result.
+> I tried implementing fastapi-login to achieve the same for a simple HTML deployment, but is not possible for the current deployment and intended result. More information can be found at the bottom of this README -> Front-end details.
 
 Added endpoints:
   - GET + POST gerechten.
