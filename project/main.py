@@ -54,37 +54,37 @@ def get_db():
 
 fake_db = {'string': {'password': 'string'}}
 
-#@manager.user_loader()
-#def load_user(email: str):  # could also be an asynchronous function
-#    user = fake_db.get(email)
-#    return user
-#
-#@app.post("/auth/login")
-#def login(data: OAuth2PasswordRequestForm = Depends()):
-#    username = data.username
-#    password = data.password
-#    user = load_user(username)
-#    if not user:
-#        raise InvalidCredentialsException
-#    elif password != user['password']:
-#        raise InvalidCredentialsException
-#    access_token = manager.create_access_token(
-#        data={"sub":username}
-#    )
-#    resp = RedirectResponse(url="/users/",status_code=status.HTTP_302_FOUND)
-#    manager.set_cookie(resp,access_token)
-#    return resp
-#
-#@app.get("/private")
-#def getPrivateendpoint(_=Depends(manager)):
-#    return "You are an authentciated user"
-#
-#pth = path.dirname(__file__)
-#
-#@app.get("/",response_class=HTMLResponse)
-#def loginwithCreds(request:Request):
-#    with open(path.join(pth, "..\Website\login.html")) as f:
-#        return HTMLResponse(content=f.read())
+@manager.user_loader()
+def load_user(email: str):  # could also be an asynchronous function
+    user = fake_db.get(email)
+    return user
+
+@app.post("/auth/login")
+def login(data: OAuth2PasswordRequestForm = Depends()):
+    username = data.username
+    password = data.password
+    user = load_user(username)
+    if not user:
+        raise InvalidCredentialsException
+    elif password != user['password']:
+        raise InvalidCredentialsException
+    access_token = manager.create_access_token(
+        data={"sub":username}
+    )
+    resp = RedirectResponse(url="/users/",status_code=status.HTTP_302_FOUND)
+    manager.set_cookie(resp,access_token)
+    return resp
+
+@app.get("/private")
+def getPrivateendpoint(_=Depends(manager)):
+    return "You are an authentciated user"
+
+pth = path.dirname(__file__)
+
+@app.get("/",response_class=HTMLResponse)
+def loginwithCreds(request:Request):
+    with open(path.join(pth, "..\Website\login.html")) as f:
+        return HTMLResponse(content=f.read())
 
 @app.post("/token")
 def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
