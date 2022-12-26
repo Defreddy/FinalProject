@@ -366,5 +366,5 @@ Since we have already added "Fries" to dish ID 4 (Steak with fries), we will try
 
 Now we will try our API magic, which is basically the same implementation in POST Gerechten / dishes:
 
-![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/RegisterIngredientError.png)
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/RegisterIngredientError.gif)
 
