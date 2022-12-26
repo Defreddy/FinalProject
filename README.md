@@ -132,7 +132,7 @@ With data volume (StatefulSet with TWO pods / deployments -> this is the reason 
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/OktetoCloud.png)
 
-Without data volume:
+Without data volume (= clearly a deployment, thus obtains a proper Edpoint):
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/OktetoCloudCorrect.png)
 
