@@ -157,7 +157,7 @@ def read_gerechten(skip: int = 0, limit: int = 100, db: Session = Depends(get_db
 def create_gerecht(gerecht: schemas.GerechtenCreate, db: Session = Depends(get_db)):
     db_gerechten = crud.get_gerecht_by_name(db, gerecht=gerecht.naamGerecht)
     if db_gerechten:
-        raise HTTPException(status_code=400, detail="Gerecht already registered")
+        raise HTTPException(status_code=400, detail="Dish already registered. Please rename the dish, or look at the menu provided.")
     return crud.create_gerecht(db=db, gerecht=gerecht)
 
 @app.get("/ingredients/", response_model=list[schemas.Ingredient])
