@@ -80,7 +80,7 @@ pth = path.dirname(__file__)
 
 @app.get("/",response_class=HTMLResponse)
 def loginwithCreds(request:Request):
-    with open(path.join(pth, "..\Website\login.html")) as f:
+    with open(path.join(pth, "../Website/login.html")) as f:
         return HTMLResponse(content=f.read())
 
 @app.post("/token")
