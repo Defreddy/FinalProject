@@ -128,7 +128,7 @@ Overview of the OpenAPI documentation which will be further highlighted below:
 Therefore a link towards a working production environment in the cloud is not possible.
   - It is advised to use a local git clone, or utilize the readily available docker image provided at the top of this readme.
 
-With data volume:
+With data volume (StatefulSet with TWO pods / deployments -> this is the reason this is a StatefulSet. Volume + Local API service in one deployment = StatefulSet):
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/OktetoCloud.png)
 
