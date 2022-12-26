@@ -158,6 +158,12 @@
               <!-- Submit Button-->
               <div class="d-grid"><button class="btn btn-primary btn-xl" x-on:click="callmethod1" id="submitButton" type="submit">Submit</button>
               </div>
+              <div class="col-lg-4 col-md-6">
+                <p></p>
+              <p>Data inserted with id: <strong x-text="responsedata.idGerecht"></strong></p>
+              <p>Dish that was inserted: <strong x-text="responsedata.naamGerecht"></strong></p>
+              <p>Response detail: <strong x-text="responsedata.detail"></strong></p>
+              </div>
           </form>
         </div><!-- End Reservation Form -->
       </div>
@@ -387,6 +393,7 @@
                 <div class="d-grid"><button class="btn btn-primary btn-xl" x-on:click="callmethod2" id="submitButton" type="submit">Submit</button>
                 </div>
                 <div class="col-lg-4 col-md-6">
+                  <p></p>
                 <p>Data inserted with id: <strong x-text="responsedata.idGerecht"></strong></p>
                 <p>Ingredient that was inserted: <strong x-text="responsedata.naamIngredient"></strong></p>
                 </div>
