@@ -340,6 +340,6 @@ The code below has to be created for each chef / element, making your HTML file 
 ```
 
 > **Note**
-> This was obviously being done on purpose to display how much more thought and detail went into one advanced process, while the GET user data process is only a simple implementation. The GET gerechten / ingredients is clearly far more advanced and throught through.
+> This was obviously being done on purpose to display how much more thought and detail went into one advanced process, while the GET user data process is only a simple implementation. The GET gerechten / ingredients is clearly far more advanced and thought through.
 
 #### POST ingredients
