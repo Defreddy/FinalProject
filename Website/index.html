@@ -214,7 +214,7 @@
                         <template x-for="dish in dishes" :key="dish.idGerecht">
                             <div class="col-lg-4-center menu-item">
                                 <a href="assets/img/menu/menu-item-dish.idGerecht + '.png'" class="glightbox"><img src="'assets/img/menu/menu-item-' + dish.idGerecht + '.png'" class="menu-img img-fluid" alt=""></a>
-                                <img x-show="image === 'assets/img/menu/menu-item-' + dish.idGerecht + '.png'"></img>
+                                <img x-show="image === assets/img/menu/menu-item- + dish.idGerecht + .png"></img>
                                 <h4 x-text="'Dish name: ' + dish.naamGerecht + ', Dish ID: ' + dish.idGerecht">></h4>
                                 <p class="ingredients" >Ingredients: </p>
                                 <template x-for="ingredient in dish.ingredientInfo">
