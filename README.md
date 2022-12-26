@@ -66,7 +66,7 @@ Added endpoints:
   - GET + POST ingredients. Since the ingredients are included (via a relationship) in the "gerechten" request, this is not separatly added, except for the POST.
   - GET user data.
 
-- All others are either: 
+- All others are either (not added endpoints): 
   - POST, GET, DELETE, PUT, /me users: registeren LOGIN users (which is simply not possible without proper Authorization / Javascript framework knowledge).
   - POST user data: the GET request has been provided - but for adding user data i believe this is not what any other user, but the user himself, should be able to do.
 
