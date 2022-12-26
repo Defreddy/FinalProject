@@ -205,8 +205,19 @@ Without data volume (= clearly a deployment, thus obtains a proper Edpoint):
 ## Front-end details
 
 The front-end part of this API integration is fully integrated with an Okteto Cloud deployment, and a Netlify hosting solution.
+Details about Okteto Cloud have been fully discussed in a previous chapter.
 
-### Security
+### Netlify
+
+Netlify is a hosting solution with automated GitHub deployment integrations. This allows you to host a GitHub .html website and automatically deploy new .html changes to your Netlify endpoint. This way, after each deployment, the code is automatically adjusted in your endpoint. Very handy!
+
+Overview of such deployments:
+
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Netlify.gif)
+
+Here you can clearly see it distinguishes .HTML and any other changes. Each change that is NOT .html related, or linked to the /Website directory will be ignored and instantly "Canceled".
+
+### API requests included in the front-end
 
 #### GET + POST gerechten
 
