@@ -246,6 +246,14 @@ This query includes your dish details AND your ingredientInfo - your ingredients
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/bigQuery.png)
 
+This nifty piege of code will make sure a variety of aspects are instantly changing continuously:
+  - FIRST DIV: this will retrieve all the information listed above in the query: naamGerecht, recept, keukenType, idGerecht and ingredientInfo with naamIngredient and hoeveelheidIngredient.
+  - x-for EACH DISH: you will get a completely new, visual element. One single <DIV> element for dish. AlpineJS and HTML wizardry in one!
+  - IMG: Since a variety of custom images have been provided (6 to be precise), the code will automatically change the picture according to the idGerecht, ID number.
+  - Array within Array: this piece of code will also retrieve data from within the array "IngredientInfo". Double the x-for fun!
+
+Not to mention, this small piece of HTML coding does a LOT of things.
+
 ```html
 <div
 x-cloak
