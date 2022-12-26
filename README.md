@@ -22,8 +22,8 @@
   <a href="#chosen-theme">Chosen Theme</a> •
   <a href="#usage-and-links">Usage and links</a> •
   <a href="#postman-requests">Postman Requests</a> •
-  <a href="#hashing-/-SQLite-details">Hashing / SQLite details</a> •
-  <a href="#front-end">Front-end</a> •
+  <a href="#hashing-and-SQLite-details">Hashing / SQLite details</a> •
+  <a href="#front-end-details">Front-end details</a> •
   
   
 </p>
@@ -103,7 +103,7 @@ $ localhost:8051/docs
 > The webserver has a built-in SQLite database and an attached volume so your data is persistent.
 > Because the assignment requested a local SQLite DB + API server in one, there is unfortunately not an Okteto Cloud link available.
 
-## Hashing / SQLite details
+## Hashing and SQLite details
 
 * ***Hashing***
   - Hashing is provided via Bcrypt and Argon2 protocols. As you can see in the image below, the user password is fully hashed.
@@ -196,4 +196,4 @@ Therefore a link towards a working production environment in the cloud is not po
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getgerechtfinal.gif)
 
-## Front-end
+## Front-end details
