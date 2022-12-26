@@ -196,3 +196,9 @@ Therefore a link towards a working production environment in the cloud is not po
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/getgerechtfinal.gif)
 
 ## Front-end details
+
+* ***GET + POST gerechten***
+
+* ***GET - user data***
+
+* ***POST ingredients***
