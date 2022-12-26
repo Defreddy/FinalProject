@@ -5,6 +5,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_login.exceptions import InvalidCredentialsException #Exception class
 from fastapi.responses import RedirectResponse,HTMLResponse
+
 from os import path
 
 import auth
