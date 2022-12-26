@@ -29,12 +29,6 @@ manager.cookie_name = "some-name"
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 origins = [
-    "https://api-service-defreddy.cloud.okteto.net/*",
-    "https://phpmyadmin-defreddy.cloud.okteto.net/*",
-    "https://api-service-defreddy.cloud.okteto.net/createcve/",
-    "https://defreddy.github.io",
-    "https://frederikcrauwels.sinners.be/",
-    "https://frederikcrauwels.sinners.be",
     "https://friendly-jelly-004ab4.netlify.app/",
     "https://api-service-deployment-defreddy.cloud.okteto.net/*"
 ]
