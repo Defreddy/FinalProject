@@ -128,7 +128,14 @@ Overview of the OpenAPI documentation which will be further highlighted below:
 Therefore a link towards a working production environment in the cloud is not possible.
   - It is advised to use a local git clone, or utilize the readily available docker image provided at the top of this readme.
 
+With data volume:
+
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/OktetoCloud.png)
+
+Without data volume:
+
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/OktetoCloudCorrect.png)
+
 
 * ***Authentication + GET - Users***
   - Below you can see how authentication is provided within the application. A couple of "locked" requests have been provided - but every single one should do exactly the same. Once you have the token, you are able to use the API. This example will show you how authentication can lock you out unless you have valid credentials.
@@ -198,7 +205,7 @@ Therefore a link towards a working production environment in the cloud is not po
 ## Front-end details
 
 The front-end part of this API integration is fully integrated with an Okteto Cloud deployment, and a Netlify hosting solution.
-test test test
+
 
 * ***GET + POST gerechten***
 
