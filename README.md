@@ -230,8 +230,20 @@ Nonetheless, from a database perspective, 3 out of 4 entities are being displaye
 
 You will be able to find more details about the front-end and back-end endpoint deployments in the following titles.
 
-#### GET + POST gerechten
+#### GET + POST gerechten / ingredients
+
+The POST gerechten / dishes is simply being put at the top of the webpage. A production example can be seen below.
+In this example you can clearly view when your request has been accepted or declined.
+
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/RegisterDish.gif)
+
+Once you have submitted a new dish, you can find the dish in the Menu section (once the webpage is refreshed):
+
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/DishDetails.png)
+
 
 #### GET - user data
+
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/GETuserdata.png)
 
 #### POST ingredients
