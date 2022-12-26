@@ -309,7 +309,7 @@ class Gerecht(Gerechten):
 #### GET - user data
 
 As adding (your own) user data is deemed as a privileged right - and without authorization / authentication - i simply cannot allow this.
-Displaying the data on the other hand is not an issue at all.
+Displaying the data on the other hand is not an issue at all (if the user provides consent - which is GDPR / privacy, for example).
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/GETuserdata.png)
 
@@ -343,3 +343,28 @@ The code below has to be created for each chef / element, making your HTML file 
 > This was obviously being done on purpose to display how much more thought and detail went into one advanced process, while the GET user data process is only a simple implementation. The GET gerechten / ingredients is clearly far more advanced and thought through.
 
 #### POST ingredients
+
+Last but not least we can also add ingredients to our dishes. As we have created a "Steak with fries" menu item, we now want to add two obvious ingredients: Steak and fries. 
+
+View the image at GET gerechten / dishes to understand which details you NEED:
+  - Dish ID: this is being mentioned in the menu.
+  - Ingredient name: clearly steak and fries.
+  - ingredienty quantity: this can just be X gr(ams),...
+
+Once you refresh the webpage you can now see the ingredients in the menu, added to the correct dish:
+
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/RegisterIngredient.gif)
+
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/DishDetailsIngredients.png)
+
+We will also display, similar to POST gerechten, what happens when you try to add a new ingredient to a menu item. 
+Take note: this query takes into consideration Dish ID (idGerecht) AND ingredient name (nameIngredient). If you add the same ingrededient to a different Dish ID it will work as this is not deemed a "duplicate".
+
+Since we have already added "Fries" to dish ID 4 (Steak with fries), we will try to add "Fries" to ID 4 again. Since this has not been added to ID 3, we will try to add it here. You can cleary see in the picture Dish ID 3 has no ingredients. The Ingredient Quantity is absolutly irrelevant here - which is why i changes it to a different value.
+
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/DishDetails3.png)
+
+Now we will try our API magic, which is basically the same implementation in POST Gerechten / dishes:
+
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/RegisterIngredientError.png)
+
