@@ -206,9 +206,10 @@ Without data volume (= clearly a deployment, thus obtains a proper Edpoint):
 
 The front-end part of this API integration is fully integrated with an Okteto Cloud deployment, and a Netlify hosting solution.
 
+#### Security
 
-* ***GET + POST gerechten***
+#### GET + POST gerechten
 
-* ***GET - user data***
+#### GET - user data
 
-* ***POST ingredients***
+#### POST ingredients
