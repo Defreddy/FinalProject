@@ -57,7 +57,6 @@
 - [ ] Front-end application for all GET and POST endpoints.
   - [x] Front-end hosting on Netlify.
   - [x] Front-end style additions (Bootstrap theme).
-  - [x] Integrate Veu, React, Angular or Svelte as Javascript Framework: React.JS.
  
 > **Note**
 > Front-end application for all GET and POST endpoints is not marked as "completed", because not ALL GET and POST endpoints have been added.
