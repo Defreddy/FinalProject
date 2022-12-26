@@ -368,3 +368,7 @@ Now we will try our API magic, which is basically the same implementation in POS
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/RegisterIngredientError.gif)
 
+As you can see, apparently, Spaghetti now also includes Fries, which i doubt is an excellent ingredient for this menu item:
+
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/DishDetails3-extended.png)
+
