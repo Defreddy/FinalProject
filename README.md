@@ -372,3 +372,7 @@ As you can see, apparently, Spaghetti now also includes Fries, which i doubt is 
 
 ![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/DishDetails3-extended.png)
 
+> **Note**
+> Disclaimer: Since the Okteto cloud machine will probably go into "sleep" mode, the above changes will not be directly reflected in the Netlify webpage.
+
+This was my full API back-end and front-end implementation. Hopefully you learned a thing or two, and enjoyed the ride! Obviously, as you can think for yourself, this implementation can still have a variety of implementations included: add your own dish / chef picture, authentication / authorization via Javascript Framework,... But that is for another time. :)
