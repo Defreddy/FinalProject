@@ -213,7 +213,7 @@ Netlify is a hosting solution with automated GitHub deployment integrations. Thi
 
 Overview of such deployments:
 
-![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Netlify.gif)
+![screenshot](https://github.com/Defreddy/FinalProject/blob/main/Pictures_Readme/Netlify.png)
 
 Here you can clearly see it distinguishes .HTML and any other changes. Each change that is NOT .html related, or linked to the /Website directory will be ignored and instantly "Canceled".
 
